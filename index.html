@@ -3,12 +3,12 @@
   <head>
     <title>Open Teachmint</title>
     <script>
-      // Try to open the app via intent
-      window.location = "intent://homepage/2#Intent;scheme=teachmint;package=com.teachmint.teachmint;end";
+      // Try to open the app via intent with correct deep link
+      window.location = "intent://open_stories/1#Intent;scheme=teachmint;package=com.teachmint.teachmint;end";
 
-      // Fallback to Play Store with referrer for deferred deep linking
+      // Fallback to Play Store with proper encoded referrer
       setTimeout(() => {
-        window.location = "https://play.google.com/store/apps/details?id=com.teachmint.teachmint&referrer=utm_source%3Dcustom_shortlink%26utm_campaign%3Dopen_stories%26story_id%3D2";
+        window.location = "https://play.google.com/store/apps/details?id=com.teachmint.teachmint&referrer=utm_source%3Dcustom_shortlink%26utm_campaign%3Dopen_stories%26story_id%3D1";
       }, 3000);
     </script>
   </head>
